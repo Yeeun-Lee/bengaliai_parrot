@@ -12,7 +12,7 @@ N_CHANNELS = 1
 class dataset():
     def __init__(self, name, base_dir = None):
         self.name = name
-        self.base_dir = base_dir
+        self.base_dir = base_dir+'/'
 
     def load_dataset(self):
         for i in range(4):
