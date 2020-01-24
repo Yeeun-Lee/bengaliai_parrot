@@ -70,13 +70,13 @@ class Beng_Train:
         return model
 
     @classmethod
-    def train(self, resnet = False):
+    def train(self, resnet = False, dir = None):
         if resnet:
             model = self.resnet38()
         else:
             model = self.build_model()
         print(model.summary())
-        data, label = dataset('train').get_data()
+        data, label = dataset('train', base_dir=dir).get_data()
         Y_train_root = pd.get_dummies(label['grapheme_root']).values
         Y_train_vowel = pd.get_dummies(label['vowel_diacritic']).values
         Y_train_consonant = pd.get_dummies(label['consonant_diacritic']).values
