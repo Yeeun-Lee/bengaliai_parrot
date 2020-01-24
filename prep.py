@@ -10,13 +10,13 @@ IMG_SIZE = 64
 N_CHANNELS = 1
 
 class dataset():
-    def __init__(self, name):
+    def __init__(self, name, base_dir):
         self.name = name
+        self.base_dir = base_dir
 
     def load_dataset(self):
-        dir = "/content/gdrive/Shared drives/2020_Bengali/dataset/"
         for i in range(4):
-            path = dir + self.name+"_image_data_"+str(i)+".parquet"
+            path = self.base_dir + self.name+"_image_data_"+str(i)+".parquet"
             if i==0:
                 df = pd.read_parquet(path)
             else:
