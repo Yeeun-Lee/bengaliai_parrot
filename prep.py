@@ -10,7 +10,7 @@ IMG_SIZE = 64
 N_CHANNELS = 1
 
 class dataset():
-    def __init__(self, name, base_dir):
+    def __init__(self, name, base_dir = None):
         self.name = name
         self.base_dir = base_dir
 
