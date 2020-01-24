@@ -4,7 +4,7 @@ from keras.layers import Conv2D, AveragePooling2D, GlobalAveragePooling2D
 from keras.layers import MaxPooling2D, BatchNormalization, ZeroPadding2D
 from keras.regularizers import l2
 import tensorflow as tf
-tf.logging.set_verbosity(tf.logging.ERROR)
+# tf.logging.set_verbosity(tf.logging.ERROR)
 from keras.applications.resnet50 import ResNet50, decode_predictions
 from keras.optimizers import Adam
 from sklearn.model_selection import train_test_split
